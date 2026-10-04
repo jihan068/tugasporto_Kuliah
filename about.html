@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Portofolio Jihan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">Portofolio</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about">
+    <img src="jihan.jpg" alt="Foto Profil" class="foto-profil" id="fotoProfil">
+    <div class="about-text">
+      <h2>About me</h2>
+      <p>
+        I am a student who graduated from high school with a science major 
+        and am currently studying Informatics Management at the State University of Surabaya.
+        I have a strong desire to develop myself through organizational activities. 
+        I am skilled at socializing with many people, responsible in completing assigned tasks, 
+        and able to work both in a team and independently. 
+        In addition, I am proficient in using Microsoft Excel, Microsoft Word, Visual Studio Code, and Figma.
+      </p>
+
+      <!-- Tombol sembunyikan/tampilkan foto -->
+      <div class="btn-foto">
+        <button id="hideFoto">HIDE</button>
+        <button id="showFoto">SHOW</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tombol Experience -->
+  <section class="btn-experience">
+    <button id="toggleExp">EXPERIENCE</button>
+  </section>
+ 
+  <section id="pengalaman" class="pengalaman hidden">
+    <div class="experience-container">
+      <div class="experience-card">
+        <img src="pengalaman1.jpg" alt="Pengalaman 1">
+        <h3>Volunteer at “UNESA Bersih”</h3>
+        <p>
+          I participated as a volunteer in the UNESA Bersih program, where I contributed to environmental cleanliness activities on campus. 
+          Through this experience, I developed a sense of social responsibility, teamwork skills, 
+          and awareness of the importance of maintaining a clean and sustainable environment.
+        </p>
+      </div>
+     
+      <div class="experience-card">
+        <img src="pengalaman2.jpg" alt="Pengalaman 2">
+        <h3>Staff of HIMAFORTIC</h3>
+        <p>
+          I served as a staff member of HIMAFORTIC, where I was involved in organizing events and supporting various student activities. 
+          This role enhanced my communication, teamwork, and organizational skills while allowing me to contribute actively to the academic community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script>
+    // Tombol Experience
+    const btn = document.getElementById("toggleExp");
+    const pengalaman = document.getElementById("pengalaman");
+    btn.addEventListener("click", () => {
+      pengalaman.classList.toggle("hidden");
+    });
+
+    // Tombol Sembunyikan/Tampilkan Foto
+    const fotoProfil = document.getElementById("fotoProfil");
+    const hideBtn = document.getElementById("hideFoto");
+    const showBtn = document.getElementById("showFoto");
+
+    hideBtn.addEventListener("click", () => {
+      fotoProfil.classList.add("hidden");
+    });
+
+    showBtn.addEventListener("click", () => {
+      fotoProfil.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
